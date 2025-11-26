@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ToDo App - Ejercicio </title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="container">
+
+    <header>
+      <h1>Mis tareas</h1>
+    </header>
+
+    <section class="new-todo">
+      <form id="todo-form">
+        <input id="todo-input" type="text" placeholder="Agregar nueva tarea" required />
+        <button type="submit" id="add-btn">Agregar</button>
+      </form>
+    </section>
+
+    <section class="filters">
+      <div>
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="active">Activas</button>
+        <button class="filter-btn" data-filter="completed">Completadas</button>
+      </div>
+
+      <div>
+        <span id="count"></span>
+        <button id="clear-completed">Borrar completadas</button>
+      </div>
+    </section>
+
+    <section class="todo-list">
+      <ul id="todos"></ul>
+    </section>
+
+    <!-- Modal -->
+    <div id="edit-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Editar tarea</h3>
+        <form id="edit-form">
+          <input id="edit-input" type="text" required />
+          <div class="modal-actions">
+            <button type="submit">Guardar</button>
+            <button type="button" id="cancel-edit">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

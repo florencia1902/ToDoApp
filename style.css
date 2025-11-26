@@ -1,0 +1,157 @@
+/* === ESTILOS GENERALES === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #F5F5DC; /* Beige pastel */
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4A4A4A;
+  font-size: 28px;
+}
+
+/* === NUEVA TAREA === */
+.new-todo form {
+  display: flex;
+  gap: 10px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+#add-btn {
+  padding: 12px 20px;
+  background: #FE80E1; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* === FILTROS === */
+.filters {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-btn {
+  padding: 7px 14px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.filter-btn.active {
+  background: #FFB6D5; 
+  color: white;
+}
+
+#clear-completed {
+  padding: 7px 14px;
+  background: #B38CEB; 
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* === LISTA === */
+.todo-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  background: #FFF6FA; 
+  padding: 12px;
+  border: 1px solid #f0d7e6;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+  color: black;
+}
+
+/* Botones de acción */
+.actions button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background: #FFB6D5; 
+  color: white;
+}
+
+.delete-btn {
+  background: #B38CEB; 
+  color: white;
+}
+
+/* === MODAL === */
+.modal.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.modal-actions button {
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #D8B7FF;
+  color: white;
+}
